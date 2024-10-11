@@ -10,23 +10,23 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lan.zold.UserController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lan.zold.controllers.UserController">
    <children>
       <Label text="Felhasználók">
          <font>
             <Font size="18.0" />
          </font></Label>
       <Button mnemonicParsing="false" onAction="#onClickBackButton" text="Vissza" />
-      <TableView fx:id="userTable" prefHeight="272.0" prefWidth="580.0">
+      <TableView fx:id="userTable" onMouseClicked="#onClickMouseTableView" prefHeight="272.0" prefWidth="580.0">
         <columns>
-          <TableColumn prefWidth="113.0" text="Azonosító" />
-          <TableColumn prefWidth="337.0" text="Név" />
+          <TableColumn fx:id="idCol" prefWidth="113.0" text="Azonosító" />
+          <TableColumn fx:id="nameCol" prefWidth="337.0" text="Név" />
         </columns>
       </TableView>
       <HBox alignment="CENTER" prefWidth="200.0" spacing="10.0">
          <children>
-            <TextField fx:id="idField" />
-            <TextField fx:id="nameField" promptText="Teljesnév" />
+            <TextField fx:id="idField" editable="false" prefHeight="24.0" prefWidth="65.0" />
+            <TextField fx:id="nameField" prefHeight="24.0" prefWidth="331.0" promptText="Teljesnév" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefWidth="200.0" spacing="10.0">

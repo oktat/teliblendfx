@@ -1,8 +1,9 @@
-package lan.zold;
+package lan.zold.controllers;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import lan.zold.App;
 
 public class MainController {
 

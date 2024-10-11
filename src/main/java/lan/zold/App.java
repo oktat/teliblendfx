@@ -22,7 +22,7 @@ public class App extends Application {
         stage.show();
     }
 
-    static void setRoot(String fxml) {
+    public static void setRoot(String fxml) {
         try {
             trySetRoot(fxml);
         } catch (IOException e) {

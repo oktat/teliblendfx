@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" />
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lan.zold.controllers.BookController">
+   <children>
+      <Label text="Könyvek">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#onClickBackButton" text="Vissza" />
+      <TableView fx:id="bookTable" onMouseClicked="#onClickMouseTable" prefHeight="272.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="titleCol" prefWidth="235.0" text="Cím" />
+            <TableColumn fx:id="authorCol" prefWidth="191.0" text="Szerző" />
+            <TableColumn fx:id="useridCol" prefWidth="84.0" text="Könyv id" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" prefWidth="200.0" spacing="10.0">
+         <children>
+            <TextField fx:id="idField" prefHeight="24.0" prefWidth="61.0" />
+            <TextField fx:id="titleField" prefHeight="24.0" prefWidth="230.0" />
+            <TextField fx:id="authorField" prefHeight="24.0" prefWidth="201.0" />
+            <TextField fx:id="useridField" prefHeight="24.0" prefWidth="52.0" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onClickAddButton" text="Hozzáad" />
+            <Button mnemonicParsing="false" onAction="#onClickModifyButton" text="Módosít" />
+            <Button mnemonicParsing="false" onAction="#onClickDeleteButton" text="Töröl" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
